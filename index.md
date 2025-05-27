@@ -2,6 +2,6 @@
 
 
 
-![Version list](/root to img "Version list")](verlist.md "Version list")
+[Version list](verlist.md "Version list")
 
 
