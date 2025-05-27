@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Game Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            font-size: 2em;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        select, button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to My Game Site
+    </header>
+
+    <div class="container">
+        <label for="gameSelect">Choose a game:</label>
+        <select id="gameSelect">
+            <option value="">-- Select a game --</option>
+            <option value="https://example.com/game1">Super Adventure</option>
+            <option value="https://example.com/game2">Space Invaders</option>
+            <option value="https://example.com/game3">Zombie Dash</option>
+        </select>
+        <br>
+        <button onclick="playNow()">Play Now</button>
+    </div>
+
+    <script>
+        function playNow() {
+            const select = document.getElementById('gameSelect');
+            const url = select.value;
+
+            if (url) {
+                window.location.href = url;
+            } else {
+                alert('Please select a game first!');
+            }
+        }
+    </script>
+</body>
+</html>
